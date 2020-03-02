@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ToDo List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="nav-bar"></div>
+
+    <div id="app">
+      <div class="container">
+        <h1>ToDo List</h1>
+        <input class="input"
+               v-model="newToDo"
+        />
+        <button class="add-button" v-on:click="add()">Add</button>
+        <ul style="list-style-type: none;">
+          <li v-for="(todo,i,key) in todos" v-bind:key="key">
+            <input type="checkbox" v-model="todo.done" v-on:change="completedToDo()" />
+            <span v-bind:class="{ done: todo.done }">
+              {{i + 1}}: {{todo.text}} 
+            </span>
+            <button class="delete-button" @click="deleteToDo(i)">
+              X
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
+

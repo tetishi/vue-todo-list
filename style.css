@@ -1,0 +1,56 @@
+body {
+  font-family: tahoma;
+  color:#282828;
+  margin: 0px;
+}
+
+.container {
+  text-align: center;
+  display: inline-block;
+}
+
+input[type="checkbox"] {
+  height: 90px;
+}
+
+li {
+  display: grid;
+  grid-auto-rows: 70px;
+  grid-template-columns: 100px 400px 100px;
+  line-height: 100px;
+}
+  
+.nav-bar {
+  background: linear-gradient(-90deg, #84CF6A, #16C0B0);
+  height: 60px;
+  margin-bottom: 15px;
+}
+  
+#app {
+  display: flex;
+}
+  
+button {
+  margin-top: 30px;
+  border: none;
+  background-color: #16C0B0;
+  color: white;
+  height: 40px;
+  width: 40px;
+  font-size: 14px;
+} 
+
+.add-button {
+  width: 50%;
+  height: 40px;
+}
+  
+input {
+  width: 100%;  
+  height: 25px;
+  margin-bottom: 20px;
+}
+
+.done {
+  text-decoration: line-through;
+}
